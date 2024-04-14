@@ -7,7 +7,8 @@ const __dirname = path.dirname(__filename);
 
 const server = express()
 
-server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
+server.use(express.json())
+
 
 export default server

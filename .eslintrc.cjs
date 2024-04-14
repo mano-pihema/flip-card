@@ -15,4 +15,8 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  env: {
+    node: true,
+    es6: true,
+  },
 }
