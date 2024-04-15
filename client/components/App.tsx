@@ -1,13 +1,32 @@
 import { Outlet } from "react-router-dom"
-import Nav from "./Nav"
+import ResponsiveAppBar from "./ResponsiveAppBar"
+import Container from "@mui/material/Container"
+import { ThemeProvider, createTheme } from "@mui/material"
 
 function App() {
 
+  const theme = createTheme({
+    components:{
+      MuiPaper:{
+        styleOverrides:{
+          root:{
+            padding:"10px",
+            borderRadius:"10px",
+          }
+        }
+      }
+    }
+
+  })
+
   return (
     <>
-    <Nav/>
-    <Outlet/>
-
+      <ThemeProvider theme={theme}>
+        <Container >
+          <ResponsiveAppBar/>
+          <Outlet/>
+        </Container>
+      </ThemeProvider>
     </>
   )
 }

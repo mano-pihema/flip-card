@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import { getCards } from "../api/cards"
+import Card from "./Card"
+import { Stack, Typography } from "@mui/material"
 
 
 function Home () {
@@ -12,14 +14,14 @@ function Home () {
     console.log(data)
 
   return (
-    <div>
-      <div>Home</div>
-      <ul>
-        {data.map(({id,word}:{id:number,word:string})=>(
-          <li key={id}>{word}</li>
+    <>
+      <Typography variant="h4">Wordlist</Typography>
+      <Stack spacing={2}>
+        {data.map(({id,word,answer}:{id:number,word:string,answer:string})=>(
+          <Card key={id} {...{word,answer}}/>
         ))}
-      </ul>
-    </div>
+      </Stack>
+    </>
     
   )
 }
