@@ -10,8 +10,11 @@ function App() {
       MuiPaper:{
         styleOverrides:{
           root:{
-            padding:"10px",
-            borderRadius:"10px",
+            display:'flex',
+            height:'90%',
+            alignItems:'center',
+            justifyContent:'center',
+            
           }
         }
       }
@@ -21,12 +24,14 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+     
         <Container >
-          <ResponsiveAppBar/>
+          <ResponsiveAppBar/> 
+          <ThemeProvider theme={theme}>
           <Outlet/>
+          </ThemeProvider>
         </Container>
-      </ThemeProvider>
+     
     </>
   )
 }
