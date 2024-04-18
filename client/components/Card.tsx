@@ -1,65 +1,38 @@
-import { Box, Paper, Stack, TextField, Typography} from "@mui/material"
-import { useEffect, useState } from "react"
+import { Box, Paper, Stack, Typography} from "@mui/material"
+import {useState } from "react"
 
 function Card({word,answer}:{word:string,answer:string}) {
 
   const [isFlipped,setIsFlipped] = useState(false)
-  const [check,setCheck] = useState('')
-  
 
-  const paperStyle = {
-    textAlign: 'center',
-    transition: 'transform 0.7s ease',
-  };
-  
-  const flippedStyle = {
-    transform: 'rotateY(180deg)',
-  };
   const handleFlip = () => {
     setIsFlipped(!isFlipped)
   }
-
-  useEffect(() => {
-    console.log(check);
-  }, [check]); 
+  const flipStyle = {
+    p:1,
+    m:1,
+    height:'80%',
+    textAlign: 'center',
+    transition: 'transform 0.7s ease',
+    ...(isFlipped ? { transform: 'rotateY(180deg)'} : {}),
+  }
 
   return (
     <Box >
-      
       <Stack direction="row" spacing={2} justifyContent={'space-evenly'} display={'flex'}>
         <Box flex={1}  >
           <Paper
             sx={{
-              ...paperStyle,
-              ...(isFlipped ? flippedStyle : {}),
+              ...flipStyle
             }}
             onClick={handleFlip}
           >
             <Typography sx={{
-              ...paperStyle,
-              ...(isFlipped ? flippedStyle : {}),
+             ...flipStyle
             }}>{isFlipped ? answer : word}</Typography>
     
           </Paper>
         </Box>
-        <Box flex={1} paddingLeft={2} component={'form'}  >
-          <TextField
-           size="small"
-            id="outlined-controlled"
-            label="Enter answer"
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                event.preventDefault()
-                setCheck(event.target.value)
-                handleFlip()
-              } 
-              }
-            }      
-            />
-
-          <Typography >hint</Typography>
-         
-        </Box> 
       </Stack>
       
     </Box>

@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 
 
-const pages = ['Cards', 'Add', 'Learn'];
+const pages = ['Cards','Play','Add', 'Learn'];
 
 
 function ResponsiveAppBar() {

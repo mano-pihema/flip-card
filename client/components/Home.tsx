@@ -10,9 +10,7 @@ function Home () {
 
   if(isPending) return(<h3>Loading...</h3>)
   if(isError) return (<div>{error.message}</div>)
-
-    console.log(data)
-
+    
   return (
     <>
       <Typography variant="h4">Wordlist</Typography>
