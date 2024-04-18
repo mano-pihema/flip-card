@@ -35,7 +35,7 @@ const flippedStyle = {
   transform: 'rotateY(180deg)',
   background:(input==card?.answer?'green':'red')
 }
-
+// @ts-expect-error event is getting keydown and value
 function handleKeyDown(event) {
 
   if(event.key === 'Enter'){

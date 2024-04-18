@@ -11,7 +11,7 @@ export const routes = createRoutesFromElements(
   <Route element={<App/>}>
     <Route index element = {<Home/>}/>
     <Route path="/Cards" element = {<Home/>}/>
-    <Route path="/Add" element = { <AddCard/> }/>
+    <Route path="/Add" element = { <AddCard edit={false} id = {null} state ={ ()=>null}/> }/>
     <Route path="/Play" element = { <Game/> }/>
     <Route path="/Learn" element = { <Learn/> }/>
 

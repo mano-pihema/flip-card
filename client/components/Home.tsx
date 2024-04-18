@@ -16,7 +16,7 @@ function Home () {
       <Typography variant="h4">Wordlist</Typography>
       <Stack spacing={2}>
         {data.map(({id,word,answer}:{id:number,word:string,answer:string})=>(
-          <Card key={id} {...{word,answer}}/>
+          <Card key={id} {...{id,word,answer}}/>
         ))}
       </Stack>
     </>

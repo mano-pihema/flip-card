@@ -8,3 +8,5 @@ export interface Results {
   wrong:number
   total:number
 }
+
+export type UpdateCard  = Pick<NewCard,'answer'|'word'> & {id:number}

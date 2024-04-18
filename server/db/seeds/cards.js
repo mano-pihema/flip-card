@@ -2,8 +2,8 @@ export async function seed(knex) {
   // Deletes ALL existing entries
   await knex('cards').del()
   await knex('cards').insert([
-    { id: 1, word: 'word1', answer: 'answer1' },
-    { id: 2, word: 'word2', answer: 'answer2' },
-    { id: 3, word: 'word3', answer: 'answer3' },
+    { id: 1, word: 'ika', answer: 'fish' },
+    { id: 2, word: 'waka', answer: 'boat' },
+    { id: 3, word: 'toru', answer: '3' },
   ])
 }
