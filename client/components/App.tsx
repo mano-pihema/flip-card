@@ -3,6 +3,7 @@ import ResponsiveAppBar from "./ResponsiveAppBar"
 import Container from "@mui/material/Container"
 import { ThemeProvider, createTheme } from "@mui/material"
 
+
 function App() {
 
   const theme = createTheme({
@@ -19,12 +20,11 @@ function App() {
         }
       }
     }
-
   })
+
 
   return (
     <>
-     
         <Container >
           <ResponsiveAppBar/> 
           <ThemeProvider theme={theme}>

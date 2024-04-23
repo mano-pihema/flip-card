@@ -43,7 +43,7 @@ function Card({id,word,answer}:{id:number,word:string,answer:string}) {
       </IconButton>
     </Box>
       
-    <Paper  sx={{...flipStyle }} onClick={()=>setIsFlipped(!isFlipped)}>
+    <Paper sx={{...flipStyle }} onClick={()=>setIsFlipped(!isFlipped)}>
       <Typography sx={{
       ...flipStyle
       }}>{isFlipped ? answer : word}</Typography>

@@ -16,7 +16,6 @@ function AddCard ({edit ,id ,state}:{edit:boolean,id:number|null,state:()=>void}
 
   function submitHandler(event:FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    console.log({...card,id:id})
     edit?editMutation.mutate():addMutation.mutate()
     state()
   }
