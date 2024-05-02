@@ -17,7 +17,7 @@ const [input,setInput] = useState('')
 const [iteration,setIteration] = useState(0)
 const [showResults,setShowResults] = useState(false)
 const [card, setCard] = useState<NewCard | null>(null)
-const [result,setResult] = useState<Results>({wrong:0,correct:0,total:4}) 
+const [result,setResult] = useState<Results>({wrong:0,correct:0,total:data.length }) 
 
 useEffect(() => {
   if (data && data.length > 0) {
