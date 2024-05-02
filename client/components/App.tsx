@@ -12,7 +12,6 @@ function App() {
         styleOverrides:{
           root:{
             display:'flex',
-            height:'90%',
             alignItems:'center',
             justifyContent:'center',
             

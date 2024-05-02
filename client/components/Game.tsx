@@ -29,6 +29,7 @@ useEffect(() => {
 const paperStyle = {
   textAlign: 'center',
   transition: 'transform 0.7s ease',
+  height:'90%',
 }
 
 const flippedStyle = {
@@ -63,16 +64,16 @@ if(isError) return (<div>{error.message}</div>)
 
 return (
 <>
+<Typography variant="h4">Play</Typography>
 {!showResults &&
-<Box p={2} >
+<Box p={2}>
     <Stack direction="row" spacing={2} justifyContent={'space-evenly'} display={'flex'}>
-    <Box flex={1}  >
+    <Box flex={1} minHeight={100}>
           <Paper
             sx={{
               ...paperStyle,
               ...(isFlipped ? flippedStyle : {}),
-            }}
-    
+            }} 
           >
             <Typography sx={{
               ...paperStyle,
@@ -88,8 +89,6 @@ return (
           label="Enter answer"
           onKeyDown={handleKeyDown}      
           />
-        <Typography >hint</Typography>
-       
       </Box> 
     </Stack>
   </Box>}

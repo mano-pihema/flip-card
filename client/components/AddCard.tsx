@@ -3,6 +3,7 @@ import { ChangeEvent, FormEvent, useState } from "react"
 import { changeCard, postCard } from "../api/cards"
 import {NewCard} from '../../models/card'
 import { useNavigate } from "react-router-dom"
+import Typography from "@mui/material/Typography"
 
 function AddCard ({edit ,id ,state}:{edit:boolean,id:number|null,state:()=>void}) {
 
@@ -25,14 +26,14 @@ function AddCard ({edit ,id ,state}:{edit:boolean,id:number|null,state:()=>void}
     setCard({...card , [name]:value})
   }
   return (
-    <div>
-      <div>{edit?'Edit Card':'add Card'}</div>
+    <>
+    <Typography variant="h4">{edit?'Edit Card':'Add Card'}</Typography>
       <form onSubmit={submitHandler}>
         <input type="text" name = "word" placeholder="enter a word" onChange={onChangeHandler}/>
         <input type="text" name = "answer" placeholder = "enter a answer" onChange={onChangeHandler}/>
         <button type="submit"> {edit?'Edit Card':'add Card'}</button>
       </form>
-    </div>
+    </>
   )
 }
 
