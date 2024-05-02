@@ -25,15 +25,22 @@ const settings = {
 const push = new PushNotifications(settings)
 
 router.post('/',(req,res)=>{
-
+  
   const {mins,hours} = req.body
-  const timing = '*/'+mins+' '+'*'+' '+'* * *'
+  let timing = '* * * * *'
+  if(hours==0){
+    timing = '*/'+mins+' '+'*'+' '+'* * *'
+  }
+  else if(hours>=1){
+    timing = mins+' '+'*/'+hours+' '+'* * *'
+  }
+  
   console.log(timing)
   cron.schedule(timing,()=>{
     
     const data = {
       title: `reminder set`,
-      body:`reminder set for ${'minutes'+mins+'and'+hours+'hours'}`
+      body:`reminder set for ${mins+' '+'minutes'+' '+'and'+' '+hours+' '+'hours'}`
     }
     // @ts-expect-error fix type later
     push.send(subs,data,(err,result)=>{
