@@ -8,5 +8,6 @@
 -Set reminders through out the day with push notifications
 
 ## Tech
+(https://img.shields.io/npm/v/npm.svg?logo=nodedotjs)
 React/NodeJS/Sqlite3
 
