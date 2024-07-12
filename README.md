@@ -18,12 +18,12 @@ I was mostly wanting to learn about intergrating chatGpt into a app.Making Api c
 
 ## Tech
 
-![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=react)
-![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=reactquery)
-![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=openai)
+![react](https://img.shields.io/npm/v/npm.svg?logo=react)
+![react-query](https://img.shields.io/npm/v/npm.svg?logo=reactquery)
+![openai](https://img.shields.io/npm/v/npm.svg?logo=openai)
 ![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=nodedotjs)
-![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=express)
-![NodeJs](https://img.shields.io/npm/v/npm.svg?logo=sqlite)
+![express](https://img.shields.io/npm/v/npm.svg?logo=express)
+![sqlite](https://img.shields.io/npm/v/npm.svg?logo=sqlite)
 
 
 
